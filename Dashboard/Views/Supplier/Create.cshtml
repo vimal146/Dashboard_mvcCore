@@ -1,0 +1,237 @@
+﻿
+@model Dashboard.Models.Supplier
+
+@{
+    Layout = "~/Views/Shared/_Supplier.cshtml";
+    
+
+   
+}
+
+<head>
+    <title>SUPPLIER WINDOW</title>    
+    
+</head>
+
+<body>
+    <div class="container">
+        <header>Supplier Details</header>
+
+        <form action="#">
+
+
+                    <div class="form first">
+                          <div class="details personal">
+                                <span class="title">Personal Details</span>
+                
+
+                                     <div class="fields">
+
+                                          <div class="input-field">
+                                              <label asp-for="Name"></label>
+                                              <input type="text" placeholder="Enter your name" required />
+                                          </div>
+
+                                          <div class="input-field">
+                                              <label asp-for="DateofBirth"></label>
+                                              <input type="date" placeholder="date of birth" required />
+                                          </div>
+
+
+                                          <div class="input-field">
+                                               <label asp-for="Email"></label>
+                                               <input type="text" placeholder="Email" required />
+
+                                          </div>
+
+                                          <div class="input-field">
+                                              <label asp-for="PhoneNo"></label>
+                                              <input type="number" placeholder="Enter your no" required />
+                                          </div>
+
+                                          <div class="input-field">
+                                               <label asp-for="Gender"></label>
+                                               <input type="text" placeholder="Gender" required />
+
+                                          </div>
+
+                                          <div class="input-field">
+                                               <label asp-for="Occupaation"></label>
+                                               <input type="text" placeholder="Enter your occupation" required />
+                                          </div>
+
+
+                                     </div>
+
+                          </div>
+
+                          <div class="details ID">
+                                 <span class="title">Identity Details</span>
+
+
+                                   <div class="fields">
+
+                                        <div class="input-field">
+                                             <label asp-for="IDType"></label>
+                                             <input type="text" placeholder="Enter ID type" required />
+                                        </div>
+
+                                       <div class="input-field">
+                                             <label asp-for="IDNumber"></label>
+                                             <input type="number" placeholder="Enter ID no" required />
+                                       </div>
+
+
+                                       <div class="input-field">
+                                            <label asp-for="IssueAuthority"></label>
+                                            <input type="text" placeholder="Enter you issue authority" required />
+
+                                       </div>
+
+                                       <div class="input-field">
+                                            <label asp-for="IssuedState"></label>
+                                            <input type="text" placeholder="Enter Issue state" required />
+                                       </div>
+
+                                       <div class="input-field">
+                                            <label asp-for="IssuedDate"></label>
+                                            <input type="date" placeholder="Enter issued date" required />
+
+                                       </div>
+
+                                      <div class="input-field">
+                                           <label asp-for="ExpiryDate"></label>
+                                           <input type="date" placeholder="Enter expiry date" required />
+                                       </div>
+
+                                       <button class="nextBtn">
+                                           <span class="btnText">Next</span>
+                                           <i class="fa fa-arrow-alt-circle-right"></i>
+                                       </button>
+
+                                   </div>
+
+
+                           </div>
+
+
+                   </div>
+
+                  <div class="form second">
+                           <div class="details address">
+                               <span class="title">Address Details</span>
+
+
+                                 <div class="fields">
+
+                                      <div class="input-field">
+                                          <label asp-for="AddressType"></label>
+                                          <input type="text" placeholder="Enter your Address" required />
+                                      </div>
+
+                                      <div class="input-field">
+                                           <label asp-for="Nationality"></label>
+                                           <input type="text" placeholder="Enter your nationality" required />
+                                      </div>
+
+
+                                      <div class="input-field">
+                                           <label asp-for="State"></label>
+                                           <input type="text" placeholder="Enter your state" required />
+
+                                      </div>
+
+                                      <div class="input-field">
+                                            <label asp-for="District"></label>
+                                            <input type="text" placeholder="Enter your district" required />
+                                      </div>
+
+                                      <div class="input-field">
+                                             <label asp-for="BlockNumber"></label>
+                                             <input type="text" placeholder="enter your block no" required />
+
+                                      </div>
+
+                                      <div class="input-field">
+                                             <label asp-for="Pincode"></label>
+                                             <input type="text" placeholder="Enter your pincode" required />
+                                      </div>
+
+
+                                  </div>
+
+                           </div>
+
+                            <div class="details Personal">
+                                   <span class="title">Personal Details</span>
+
+
+                                      <div class="fields">
+
+                                            <div class="input-field">
+                                                <label asp-for="GST"></label>
+                                                <input type="text" placeholder="Enter GST" required />
+                                            </div>
+
+                                            <div class="input-field">
+                                                 <label asp-for="PanNo"></label>
+                                                 <input type="text" placeholder="Enter Pan no" required />
+                                            </div>
+
+
+                                            <div class="input-field">
+                                                  <label asp-for="OpeningBalance"></label>
+                                                  <input type="text" placeholder="Enter you OpeningBalance" required />
+
+                                            </div>
+
+                                            <div class="input-field">
+                                                  <label asp-for="BankName"></label>
+                                                  <input type="text" placeholder="Enter BankName" required />
+                                             </div>
+
+                                            <div class="input-field">
+                                                  <label asp-for="BankAccNo"></label>
+                                                  <input type="text" placeholder="Enter BankAccno:" required />
+
+                                            </div>
+
+                                           <div class="input-field">
+                                                  <label asp-for="IFSCCode"></label>
+                                                  <input type="text" placeholder="Enter IFSC code" required />
+                                           </div>
+
+                                      </div>
+
+                                      <div class="buttons">
+                                          <div class="backBtn">
+                                             <i class="fa fa-arrow-alt-circle-right"></i>
+                                             <span class="btnText">Back</span>                          
+                                          </div>
+
+                                          <button class="submit">
+                                             <span class="submit">Submit</span>
+                                             <i class="fa fa-arrow-alt-circle-right"></i>
+                                          </button>
+                                      </div>
+                     
+
+
+                            </div>
+
+                  </div>
+
+        </form>
+
+        <a href="~/Home/Index">
+            <span>Dashboard</span>
+        </a>
+
+
+    </div>
+
+   
+   
+
+</body>
+

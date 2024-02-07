@@ -1,0 +1,77 @@
+﻿@model List<Dashboard.Models.Domain.Company>
+
+@{
+    Layout = "~/Views/Shared/_Report.cshtml";
+}
+
+<div class="table">
+
+    <table id="myTable" class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Ph:No</th>
+                <th>Gender</th>
+                <th>Occupation</th>
+                <th>ID Type</th>
+                <th>ID No:</th>
+                <th>Issued Authority</th>
+                <th>Issued State</th>
+                <th>Issued Date</th>
+                <th>Exp Date</th>
+                <th>Address</th>
+                <th>Nationality</th>
+                <th>Stae</th>
+                <th>District</th>
+                <th>Block No:</th>
+                <th>Pincode</th>
+                <th>GST</th>
+                <th>Pan No:</th>
+                <th>Opening Balance</th>
+                <th>Bank Name</th>
+                <th>Bank A/c:No</th>
+                <th>IFSC</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in Model)
+            {
+                <tr>
+                    <td>@company.Id</td>
+                    <td>@company.Name</td>
+                    <td>@company.DateofBirth</td>
+                    <td>@company.Email</td>
+                    <td>@company.PhoneNo</td>
+                    <td>@company.Gender</td>
+                    <td>@company.Occupaation</td>
+                    <td>@company.IDType</td>
+                    <td>@company.IDNumber</td>
+                    <td>@company.IssueAuthority</td>
+                    <td>@company.IssuedState</td>
+                    <td>@company.IssuedDate</td>
+                    <td>@company.ExpiryDate</td>
+                    <td>@company.AddressType</td>
+                    <td>@company.Nationality</td>
+                    <td>@company.State</td>
+                    <td>@company.District</td>
+                    <td>@company.BlockNumber</td>
+                    <td>@company.Pincode</td>
+                    <td>@company.GST</td>
+                    <td>@company.PanNo</td>
+                    <td>@company.OpeningBalance</td>
+                    <td>@company.BankName</td>
+                    <td>@company.BankAccNo</td>
+                    <td>@company.IFSCCode</td>
+                    <td><a href="/Company/View/@company.Id">View</a></td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+

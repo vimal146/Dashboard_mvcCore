@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.5/b-2.4.1/fc-4.3.0/sc-2.2.0/sb-1.5.0/sp-2.2.0/sl-1.7.0/datatables.min.css" rel="stylesheet">
+    @*<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>*@
+    @*<link href="~/src/css/Barcode.css" rel="stylesheet">*@
+</head>
+<body>
+
+    @* <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.js" type="text/javascript"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/blitzer/jquery-ui.css"
+    rel="Stylesheet" type="text/css" />
+    <script type="text/javascript">*@
+    <div>
+        @RenderBody()
+    </div>
+    <script src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.7.0/dt-1.13.5/b-2.4.1/fc-4.3.0/sc-2.2.0/sb-1.5.0/sp-2.2.0/sl-1.7.0/datatables.min.js"></script>
+    <script src="~/spec/js/Invoice.js" asp-append-version="true"></script>
+    <script src="~/src/js/HomeInvoiceController.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@model List<Dashboard.Models.Domain.Manufacturer>
+
+@{
+	Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div class="table">
+	<table id="myTable" class="table table-bordered table-hover table-sm">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var manufacturer in Model)
+			{
+				<tr>
+					<td>@manufacturer.Id</td>
+					<td>@manufacturer.Name</td>
+					<td><a href="/Manufacturer/View/@manufacturer.Id">View</a></td>
+
+				</tr>
+			}
+		</tbody>
+
+
+	</table>
+</div>

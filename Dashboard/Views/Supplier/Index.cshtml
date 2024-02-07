@@ -1,0 +1,106 @@
+﻿@model List<Dashboard.Models.Domain.Addsupplier>
+
+@{
+    Layout = "~/Views/Shared/_Report.cshtml";
+}
+
+<div class="table">
+
+    <table id="myTable" class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Ph:No</th>
+                <th>Gender</th>
+                <th>Occupation</th>
+                <th>ID Type</th>
+                <th>ID No:</th>
+                <th>Issued Authority</th>
+                <th>Issued State</th>
+                <th>Issued Date</th>
+                <th>Exp Date</th>
+                <th>Address</th>
+                <th>Nationality</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Block No:</th>
+                <th>Pincode</th>
+                <th>GST</th>
+                <th>Pan No:</th>
+                <th>Opening Balance</th>
+                <th>Bank Name</th>
+                <th>Bank A/c:No</th>
+                <th>IFSC</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var addsupplier in Model)
+            {
+                <tr>
+
+                    <td>@addsupplier.Id</td>
+                    <td>@addsupplier.Name</td>
+                    <td>@addsupplier.DateofBirth</td>
+                    <td>@addsupplier.Email</td>
+                    <td>@addsupplier.PhoneNo</td>
+                    <td>@addsupplier.Gender</td>
+                    <td>@addsupplier.Occupaation</td>
+                    <td>@addsupplier.IDType</td>
+                    <td>@addsupplier.IDNumber</td>
+                    <td>@addsupplier.IssueAuthority</td>
+                    <td>@addsupplier.IssuedState</td>
+                    <td>@addsupplier.IssuedDate</td>
+                    <td>@addsupplier.ExpiryDate</td>
+                    <td>@addsupplier.AddressType</td>
+                    <td>@addsupplier.Nationality</td>
+                    <td>@addsupplier.District</td>
+                    <td>@addsupplier.State</td>
+                    <td>@addsupplier.BlockNumber</td>
+                    <td>@addsupplier.Pincode</td>
+                    <td>@addsupplier.GST</td>
+                    <td>@addsupplier.PanNo</td>
+                    <td>@addsupplier.OpeningBalance</td>
+                    <td>@addsupplier.BankName</td>
+                    <td>@addsupplier.BankAccNo</td>
+                    <td>@addsupplier.IFSCCode</td>
+                    <td><a href="/Supplier/View/@addsupplier.Id">View</a></td>
+
+                    @*<td>@supplier.Id</td>
+                    <td>@supplier.Name</td>
+                    <td>@supplier.DateofBirth</td>
+                    <td>@supplier.Email</td>
+                    <td>@supplier.PhoneNo</td>
+                    <td>@supplier.Gender</td>
+                    <td>@supplier.Occupaation</td>
+                    <td>@supplier.IDType</td>
+                    <td>@supplier.IDNumber</td>
+                    <td>@supplier.IssueAuthority</td>
+                    <td>@supplier.IssuedState</td>
+                    <td>@supplier.IssuedDate</td>
+                    <td>@supplier.ExpiryDate</td>
+                    <td>@supplier.AddressType</td>
+                    <td>@supplier.Nationality</td>
+                    <td>@supplier.District</td>
+                    <td>@supplier.State</td>                  
+                    <td>@supplier.BlockNumber</td>
+                    <td>@supplier.Pincode</td>
+                    <td>@supplier.GST</td>
+                    <td>@supplier.PanNo</td>
+                    <td>@supplier.OpeningBalance</td>
+                    <td>@supplier.BankName</td>
+                    <td>@supplier.BankAccNo</td>
+                    <td>@supplier.IFSCCode</td>
+                    <td><a href="/Company/View/@supplier.Id">View</a></td>*@
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+

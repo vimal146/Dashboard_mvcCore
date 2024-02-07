@@ -1,0 +1,39 @@
+﻿@model List<Dashboard.Models.Domain.Category>
+
+@{
+	Layout = "~/Views/Shared/_Empty.cshtml";
+	//ViewData["Title"] = "Display Data";
+	//string[] TableHeaders = new string[] {"Id"
+	//					   ,"Name"
+	//						  ,""};
+}
+
+<div class="table">
+	<table id="myTable" class="table table-bordered table-hover table-sm">
+       <thead>
+		   <tr>
+			
+				<th>Id</th>
+				<th>Name</th>
+				<th> </th>
+			
+		   </tr>
+	   </thead>
+	   <tbody>
+		   @{
+			   if(Model != null)
+			   {
+		  
+		           @foreach (var category in Model)
+			       {
+			         <tr>
+				        <td>@category.Id</td>
+				        <td>@category.Name</td>
+				        <td><a href="/Category/View/@category.Id">View</a></td>
+			         </tr>
+			       }
+			   }
+		   }
+		</tbody>
+	</table>
+</div>

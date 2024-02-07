@@ -1,0 +1,240 @@
+﻿@model Dashboard.Models.AddItem
+
+@{
+    Layout = "~/Views/Shared/_Item.cshtml";
+}
+
+<head>
+    <title>ITEM WINDOW</title>
+
+</head>
+<body>
+    <div class="container">
+        <header>Item Details</header>
+
+        <form action="Add" method="post">
+
+
+
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">@*Personal Details*@</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="Id">Id</label>
+                            <input asp-for="Id" placeholder="Enter Item name" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ItemNameId">Item Name</label>
+                            <input asp-for="ItemNameId" placeholder="Enter Item name" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ItemCodeId" class="control-label">Item Code</label>
+                            <input asp-for="ItemCodeId" placeholder="Enter Item Code" class="form-control" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="CategoryId">Category</label>
+                            <input asp-for="CategoryId" placeholder="Select Category" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ManufacturerId">Manufacturer</label>
+                            <input asp-for="ManufacturerId" placeholder="Select Manufacturer" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="BrandId">Brand</label>
+                            <input asp-for="BrandId" placeholder="Select Brand" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="GSTId">GST</label>
+                            <input type="number" asp-for="GSTId" placeholder="Select GST" required />
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="details ID">
+                    <span class="title">@*Identity Details*@</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="UnitId">Unit</label>
+                            <input asp-for="UnitId" placeholder="Select Unit" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="HSNCode">HSN Code</label>
+                            <input asp-for="HSNCode" placeholder="Enter HSN code" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="BatchId">Batch</label>
+                            <input asp-for="BatchId" placeholder="Enter Batch" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="MRPId">MRP</label>
+                            <input type="number" asp-for="MRPId" placeholder="Enter MRP" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="PurchasePriceId">Purchase Prize</label>
+                            <input type="number" asp-for="PurchasePriceId" placeholder="Enter Purchaseprize" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="LandingCostId">Landing Cost</label>
+                            <input type="number" asp-for="LandingCostId" placeholder="Enter Landing cost" required />
+                        </div>
+
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">@*Address Details*@</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="SalePriceId">Sale Price</label>
+                            <input type="number" asp-for="SalePriceId" placeholder="Enter Sale prize" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="SalesDiscount">Sale Discount</label>
+                            <input type="number" asp-for="SalesDiscount" placeholder="Enter Sales discount" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="OpeningQuantity">Opening Quantity</label>
+                            <input asp-for="OpeningQuantity" placeholder="Enter Opening Quantity" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="RackColor">Rack Color</label>
+                            <input asp-for="RackColor" placeholder="Enter Rack color" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ColorCode">Color Code</label>
+                            <input asp-for="ColorCode" placeholder="Enter color code" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="QuantityWarning">Quantity Warning</label>
+                            <input asp-for="QuantityWarning" placeholder="Enter quantity warning" required />
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="details Personal">
+                    <span class="title">@*Personal Details*@</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="IMEnumber">IME number</label>
+                            <input asp-for="IMEnumber" placeholder="Enter IME number" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ItemPackedDate" for="">ItemPacked Date</label>
+                            <input type="date" asp-for="ItemPackedDate" placeholder="" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="ItemExpiryDate">ItemExpiry Date</label>
+                            <input type="date" asp-for="ItemExpiryDate" placeholder="" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ItemManuDate">ItemManufacturer Date</label>
+                            <input type="date" asp-for="ItemManuDate" placeholder="" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ItemIssuedDate">ItemIssued Date</label>
+                            <input type="date" asp-for="ItemIssuedDate" placeholder="" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="Discription"></label>
+                            <input asp-for="Discription" placeholder="Enter Discription" required />
+                        </div>
+
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+
+                        <button class="submit">
+                            <span class="submit">Submit</span>
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Item">Delete</button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <a href="~/Home/Index">
+            <span>Dashboard</span>
+        </a>
+
+
+    </div>
+
+
+
+
+</body>
+
+
+

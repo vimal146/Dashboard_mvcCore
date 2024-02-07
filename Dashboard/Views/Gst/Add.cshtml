@@ -1,0 +1,49 @@
+﻿@model Dashboard.Models.AddGst
+
+@{
+    Layout = "~/Views/Shared/_Item.cshtml";
+}
+
+
+
+
+<head>
+    <title>GST WINDOW</title>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <header>Add GST</header>
+
+
+        <div class="fields">
+            @*<div class="col-md-4 bg-light border boder-primary rounded pl-5 pr-5 pb-5">*@
+            <form asp-action="Add">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="input-field">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+
+            </form>
+
+            <a href="Index">
+                <span>Back to List</span>
+            </a>
+
+            <div class="form-check">
+                <a href="~/Home/Index">
+                    <span>Dashboard</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</body>

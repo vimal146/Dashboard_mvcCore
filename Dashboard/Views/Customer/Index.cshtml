@@ -1,0 +1,81 @@
+﻿@model List<Dashboard.Models.Domain.Customer>
+
+@{
+    Layout = "~/Views/Shared/_Report.cshtml";
+}
+
+<div class="table">
+
+    <table id="myTable" class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Ph:No</th>
+                <th>Gender</th>
+                <th>Occupation</th>
+                <th>ID Type</th>
+                <th>ID No:</th>
+                <th>Issued Authority</th>
+                <th>Issued State</th>
+                <th>Issued Date</th>
+                <th>Exp Date</th>
+                <th>Address</th>
+                <th>Nationality</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Block No:</th>
+                <th>Pincode</th>
+                <th>GST</th>
+                <th>Pan No:</th>
+                <th>Opening Balance</th>
+                <th>Bank Name</th>
+                <th>Bank A/c:No</th>
+                <th>IFSC</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+
+                    <td>@customer.Id</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.DateofBirth</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.PhoneNo</td>
+                    <td>@customer.Gender</td>
+                    <td>@customer.Occupaation</td>
+                    <td>@customer.IDType</td>
+                    <td>@customer.IDNumber</td>
+                    <td>@customer.IssueAuthority</td>
+                    <td>@customer.IssuedState</td>
+                    <td>@customer.IssuedDate</td>
+                    <td>@customer.ExpiryDate</td>
+                    <td>@customer.AddressType</td>
+                    <td>@customer.Nationality</td>
+                    <td>@customer.District</td>
+                    <td>@customer.State</td>
+                    <td>@customer.BlockNumber</td>
+                    <td>@customer.Pincode</td>
+                    <td>@customer.GST</td>
+                    <td>@customer.PanNo</td>
+                    <td>@customer.OpeningBalance</td>
+                    <td>@customer.BankName</td>
+                    <td>@customer.BankAccNo</td>
+                    <td>@customer.IFSCCode</td>
+                    <td><a href="/Customer/View/@customer.Id">View</a></td>
+
+               </tr>     
+
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

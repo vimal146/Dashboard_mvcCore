@@ -1,0 +1,81 @@
+﻿@model List<Dashboard.Models.Domain.Employee>
+
+@{
+    Layout = "~/Views/Shared/_Report.cshtml";
+}
+
+<div class="table">
+
+    <table id="myTable" class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Ph:No</th>
+                <th>Gender</th>
+                <th>Occupation</th>
+                <th>ID Type</th>
+                <th>ID No:</th>
+                <th>Issued Authority</th>
+                <th>Issued State</th>
+                <th>Issued Date</th>
+                <th>Exp Date</th>
+                <th>Address</th>
+                <th>Nationality</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Block No:</th>
+                <th>Pincode</th>
+                <th>GST</th>
+                <th>Pan No:</th>
+                <th>Opening Balance</th>
+                <th>Bank Name</th>
+                <th>Bank A/c:No</th>
+                <th>IFSC</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.DateofBirth</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.PhoneNo</td>
+                    <td>@employee.Gender</td>
+                    <td>@employee.Occupaation</td>
+                    <td>@employee.IDType</td>
+                    <td>@employee.IDNumber</td>
+                    <td>@employee.IssueAuthority</td>
+                    <td>@employee.IssuedState</td>
+                    <td>@employee.IssuedDate</td>
+                    <td>@employee.ExpiryDate</td>
+                    <td>@employee.AddressType</td>
+                    <td>@employee.Nationality</td>
+                    <td>@employee.District</td>
+                    <td>@employee.State</td>
+                    <td>@employee.BlockNumber</td>
+                    <td>@employee.Pincode</td>
+                    <td>@employee.GST</td>
+                    <td>@employee.PanNo</td>
+                    <td>@employee.OpeningBalance</td>
+                    <td>@employee.BankName</td>
+                    <td>@employee.BankAccNo</td>
+                    <td>@employee.IFSCCode</td>
+                    <td><a href="/Employee/View/@employee.Id">View</a></td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

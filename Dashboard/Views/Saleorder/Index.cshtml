@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "~/Views/Shared/_Barcode.cshtml";
+}
+
+@*<div class="table">
+
+    <table id="myTable" class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Supplier</th>
+                <th>Po:No</th>
+                <th>Invoice No:</th>
+                <th>Date</th>
+                <th>B2B invoice</th>
+                <th>B2C invoice</th>
+                <th>A/C type</th>
+                <th>Address</th>
+                <th>Total</th>
+                <th>T.charge</th>
+                <th>Gst</th>
+                <th>Grand Total</th>
+                <th>Currency</th>
+                <th>Payment method</th>
+                <th>Notes</th>
+                <th>Opening Quantity</th>
+                <th>Rack color</th>
+                <th>Color code</th>
+                <th>Quantity warning</th>
+                <th>IME number</th>
+                <th>Manu.Date</th>
+                <th>Packed Date</th>
+                <th>Exp.Date</th>
+                <th>Issued Date</th>
+                <th>Description</th>
+                <th> </th>
+
+            </tr>
+        </thead>
+     </table>
+</div>
+*@
+<div class="container">
+    <header>Sale Window</header>
+    <input type="text" id="itemInput" placeholder="Type item name">
+    <select id="itemDropdown"></select>
+    <div id="itemDetails">
+        <input id="itemInput" type="text" />
+        <input id="categoryBox" type="text" />
+        <input id="brandBox" type="text" />
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    
+ <script>
+        $(document).ready(function () {
+            $('#itemInput').on('input', function () {
+                var input = $(this).val();
+                $.post('/Saleorder/GetItemNames', { input: input }, function (data) {
+                    $('#itemDropdown').empty();
+                    $.each(data, function (index, value) {
+                        $('#itemDropdown').append($('<option>').text(value).attr('value', value));
+                    });
+                });
+            });
+
+            $('#itemDropdown').on('change', function () {
+                var selectedItem = $(this).val();
+            $.post('/Saleorder/GetItemDetails', { selectedItem: selectedItem }, function (data) {
+                    if (data) {
+                        $('#itemDetails').html(`Category: ${data.category}<br>Brand: ${data.brand}`);
+                    } else {
+                        $('#itemDetails').html('Item not found.');
+                    }
+                });
+            });
+        });
+</script>
+

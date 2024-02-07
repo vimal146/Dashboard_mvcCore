@@ -1,0 +1,32 @@
+﻿@model List<Dashboard.Models.Domain.Brand>
+
+@{
+	Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div class="table">
+	<table id="myTable" class="table table-bordered table-hover table-sm">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th> </th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var brand in Model)
+			{
+				<tr>
+					<td>@brand.Id</td>
+					<td>@brand.Name</td>
+					<td><a href="/Brand/View/@brand.Id">View</a></td>
+					@*<td><a href="/Brand/Delete/@brand.Id"></a>Delete</td>*@
+					
+				</tr>
+			}
+		</tbody>
+
+
+	</table>
+</div>

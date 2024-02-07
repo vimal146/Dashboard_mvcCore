@@ -1,0 +1,236 @@
+﻿@model Dashboard.Models.Addcustomer
+
+@{
+    Layout = "~/Views/Shared/_Supplier.cshtml";
+
+
+
+}
+
+<head>
+    <title>CUSTOMER WINDOW</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>Supplier Details</header>
+
+        <form action="Add" method="post">
+
+
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" placeholder="Enter  name" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="DateofBirth"></label>
+                            <input asp-for="DateofBirth" placeholder="Enter DOB" autocomplete="off" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" placeholder="Enter Email" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="PhoneNo"></label>
+                            <input asp-for="PhoneNo" placeholder="Enter Item name" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="Gender"></label>
+                            <input asp-for="Gender" placeholder="Enter Gender" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="Occupaation"></label>
+                            <input asp-for="Occupaation" placeholder="Enter Occupation" autocomplete="off" required />
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="IDType"></label>
+                            <input asp-for="IDType" placeholder="Enter ID type" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="IDNumber"></label>
+                            <input asp-for="IDNumber" placeholder="Enter ID No:" autocomplete="off" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="IssueAuthority"></label>
+                            <input asp-for="IssueAuthority" placeholder="Enter " autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="IssuedState"></label>
+                            <input asp-for="IssuedState" placeholder="Enter Issued state" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="IssuedDate"></label>
+                            <input asp-for="IssuedDate" placeholder="Enter Issued date" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="ExpiryDate"></label>
+                            <input asp-for="ExpiryDate" placeholder="Enter Exp date" autocomplete="off" required />
+                        </div>
+
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="AddressType"></label>
+                            <input asp-for="AddressType" placeholder="Enter AddressType" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="Nationality"></label>
+                            <input asp-for="Nationality" placeholder="Enter Nation" autocomplete="off" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="State"></label>
+                            <input asp-for="State" placeholder="Enter Stae" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="District"></label>
+                            <input asp-for="District" placeholder="Enter District" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="BlockNumber"></label>
+                            <input asp-for="BlockNumber" placeholder="Enter block No:" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="Pincode"></label>
+                            <input asp-for="Pincode" placeholder="Enter pin" autocomplete="off" required />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="details Personal">
+                    <span class="title">Personal Details</span>
+
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label asp-for="GST"></label>
+                            <input asp-for="GST" placeholder="Enter GST" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="PanNo"></label>
+                            <input asp-for="PanNo" placeholder="Enter Pan" autocomplete="off" required />
+                        </div>
+
+
+                        <div class="input-field">
+                            <label asp-for="OpeningBalance"></label>
+                            <input asp-for="OpeningBalance" placeholder="Enter openingBalance" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="BankName"></label>
+                            <input asp-for="BankName" placeholder="Enter bank name" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="BankAccNo"></label>
+                            <input asp-for="BankAccNo" placeholder="Enter baankaccNo:" autocomplete="off" required />
+
+                        </div>
+
+                        <div class="input-field">
+                            <label asp-for="IFSCCode"></label>
+                            <input asp-for="IFSCCode" placeholder="Enter IFSC" autocomplete="off" required />
+                        </div>
+
+
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+
+                        <button class="submit">
+                            <span class="submit">Submit</span>
+                            <i class="fa fa-arrow-alt-circle-right"></i>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <a href="~/Home/Index">
+            <span>Dashboard</span>
+        </a>
+
+
+    </div>
+
+
+
+
+</body>
+

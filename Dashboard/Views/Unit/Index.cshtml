@@ -1,0 +1,30 @@
+﻿@model List<Dashboard.Models.Domain.Unit>
+
+@{
+	Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div class="table">
+	<table id="myTable" class="table table-bordered table-hover table-sm">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var unit in Model)
+			{
+				<tr>
+					<td>@unit.Id</td>
+					<td>@unit.Name</td>
+					<td><a href="/Unit/View/@unit.Id">View</a></td>
+
+				</tr>
+			}
+		</tbody>
+
+
+	</table>
+</div>

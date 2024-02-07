@@ -1,0 +1,20 @@
+﻿@model List<Dashboard.Models.Domain.Item>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach(var item in Model)
+            {
+                <li>@item.ItemNameId</li>
+            }
+        </ul>
+        @RenderBody()
+    </div>
+</body>
+</html>

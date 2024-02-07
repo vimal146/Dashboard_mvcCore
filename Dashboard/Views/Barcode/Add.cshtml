@@ -1,0 +1,79 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_barcode.cshtml";
+}
+
+
+     <div class="table">
+
+
+               <table id="" class="table table-bordered">
+                   <thead>
+                            <tr>
+                                    <th scope="col">#</th>
+                                    <th>Particular</th>
+                                    <th>Item.code</th>
+                                    <th>Barcode</th>
+                                    <th>Batch.No</th>
+                                    <th>MRP</th>
+                                    <th>Qty</th>
+                                    <th>P.Price</th>
+                                    <th>S.Price</th>
+                                    <th>Discount</th>
+                                    <th>GST</th>
+                                    <th>CGST</th>
+                                    <th>SGST</th>
+                                    <th>Tot.amount</th>
+                                    <th>
+                                        <button type="button" class="btn btn-sm btn-success" onclick="BtnAdd()">+</button>
+
+                                    </th>
+                            </tr>
+                   </thead>
+                   <tbody id="TBody">
+                               
+                                
+                                <tr id="TRow" class="@*d-none*@">
+                                    <th scope="col">1</th>
+
+                                    
+                                    <td><input style="position: relative; width: 400px; left: 0px; " id="SearchInput" name="" autocomplete="off"  ></td>
+                                    <td><input style="width:90px;" name="item.code" onchange="Calc(this);"  autocomplete="off" ></td>
+                                    <td><input style="width:80px;" name="barcode" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:70px;" name="batch.No" onchange="Calc(this);" autocomplete="off" ></td>
+                                    <td><input style="width:70px;" name="MRP" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:40px;" name="qty" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="p.price" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="s.price" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="discount" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="GST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="CGST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="SGST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="amt" value="0" disabled="" autocomplete="off"></td>
+                                    <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
+                                </tr>
+                               
+                   </tbody>
+               </table>
+          </div>
+
+@*<div id="searchResults">
+	@await Html.PartialAsync("_ItemSearchResults", Model.Items)
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function searchItems(){
+		var query = document.getElementById("itemName").value;
+		
+		if(query.length >=2){
+			$.ajax({
+				url:'/Barcode/Search',
+				data: {query: query },
+				success: function(data){
+                    $('#searchResults').html(data);
+				}
+			});
+		}
+	}
+</script>*@

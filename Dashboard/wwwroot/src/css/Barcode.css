@@ -1,0 +1,352 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+}
+
+.container {
+    position: relative;
+    max-width: 2050px;
+    width: 1660px;
+    bottom: 9px;
+    height: 770px;
+    left: 1px;
+    border-radius: 3px;
+    padding: 370px;
+    margin: 10px 1px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+    .container header {
+        position: relative;
+        font-size: 20px;
+        left: -365px;
+        bottom: 365px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #4070f4;
+        width: 200px;
+    }
+
+        .container header::before {
+            content: "";
+            position: absolute;
+            left: -200px;
+            bottom: -10px;
+            height: 5px;
+            border-radius: 8px;
+            background-color: #4070f4;
+        }
+
+    .container form {
+        position: relative;
+        margin-bottom: -100px;
+        margin-left: -100px;
+        top: -310px;
+        min-height: 15px;
+        background-color: #fff;
+    }
+
+    .container .fields {
+        position: relative;
+    }
+
+
+    .container form .fields {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 19px;
+        padding: 10px 10px;
+        margin: 1px 1px;
+        left: 10px;
+    }
+
+.input-field label {
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+    width: 515px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 1px 1px;
+    margin-top: -120px;
+    margin-left: -275px;
+    color: #2e2e2e;
+}
+
+.input-field input {
+    outline: none;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    width: 200px;
+    border-radius: 1px;
+    border: 7px solid #ffffff;
+    padding: 19px 10px;
+    height: 40px;
+    margin: 3px 1px;
+    margin-left: -280px;
+    margin-top: -10px;
+    color: #000000;
+    background-color: #80808031;
+}
+
+.input-fields input {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    left: -1952px;
+    top: 5px;
+    height: 75px;
+    padding: 10px 7px;
+    border: 2px solid #ffffff;
+    background-color: #80808031;
+}
+
+.input-fields label {
+    position: relative;
+    font-size: 16px;
+    top: 8px;
+    margin-left: -1950px;
+    color: #000000;
+}
+
+
+.container .table {
+    position: relative;
+    max-width: 1840px;
+    width: 2800px;
+    left: 9px;
+    top: 0px;
+    height: 300px;
+}
+
+.container .table-bordered {
+    position: relative;
+    left: 250px;
+    top: 10px;
+}
+
+.table {
+    position: sticky;
+    top: 0px;
+    width: 1590px;
+    margin-left: -10px;
+    height: 750px;
+    background: #fff;
+    margin-top: 14px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 1px 1px;
+}
+
+
+
+
+table th {
+    position: relative;
+    font-size: 13px;
+    color: #333;
+    border: 20px;
+    bottom: 3px;
+    left: 2px;
+    width: 100%;
+}
+
+/*table tbody {
+    position: sticky;
+    overflow-y: auto;
+    max-height: 400px;
+}*/
+
+
+
+/*table thead th,*/
+table tbody td {
+    position: relative;
+    padding: 5px 0px;
+    bottom: 5px;
+    height: 20px;
+    border: none;
+    font-weight: 600;
+}
+
+
+
+table-bordered td,
+.table-bordered th {
+    border: 0 solid #808080;
+}
+
+.table-bordered td {
+    border: 1px;
+}
+
+table tbody td {
+    border-bottom: 1px 0px solid rgba(0,0,0,0.1);
+}
+
+
+td input {
+    font-size: 15px;
+    border: none;
+    padding: 7px 4px;
+    background-color: #ffffff;
+}
+
+
+.container .field {
+    position: relative;
+    height: 10px;
+    bottom: 270px;
+}
+
+.form .field {
+    display: flex;
+    position: relative;
+}
+
+.field .input-group {
+    position: relative;
+    font-size: 18px;
+    width: 650px;
+    padding: 0 200px;
+    right: -930px;
+    top: 210px
+}
+
+.input-group label {
+    position: relative;
+    left: -70px;
+    bottom: -78px;
+    width: 250px;
+    outline: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.input-group input {
+    position: relative;
+    display: flex;
+    bottom: -45px;
+    font-size: 10px;
+    margin-left: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    background-color: #8080807c;
+}
+
+.field .form-group {
+    position: relative;
+    font-size: 12px;
+    left: -250px;
+    top: -0px;
+    padding: 13px 1px;
+}
+
+.form-group label {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    top: 63px;
+}
+
+.form-group input {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 30px;
+    padding: 10px 12px;
+    border: 1px solid #00000059;
+    background-color: #ffffff;
+}
+
+.container .figure {
+    position: relative;
+    top: -220px;
+    padding: 1px 2px;
+}
+
+.figure .form {
+    display: flex;
+    margin-left: 1100px;
+    margin-top: 19px;
+    padding: 1px 12px;
+}
+
+.form label {
+    position: relative;
+    left: -6px;
+    font-size: 14px;
+    color: #000000;
+    padding: 1px 1px;
+}
+
+.form input {
+    position: relative;
+    left: 13px;
+    padding: 2px 12px;
+    background-color: #ffffff;
+    border: 1px solid #00000035;
+}
+
+.container .buttons {
+    position: relative;
+    padding: 1px 10px;
+    font-size: 20px;
+    left: -170px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.container buttons, .backBtn {
+    position: relative;
+    display: flex;
+    width: 60px;
+    font-size: 20px;
+    top: 2px;
+    border-radius: 5px;
+    left: -90px;
+    color: #ffffff;
+    background-color: #006400;
+}
+
+.container buttons, .submit {
+    display: flex;
+    width: 60px;
+    font-size: 20px;
+    margin-top: -14px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+/*.container .btn-group{
+    position:relative;
+    font-size: 20px;
+    width: 1100px;
+    bottom: -300px;
+    padding: 0;
+    border: 2px;
+    
+}
+*/
+
+
+

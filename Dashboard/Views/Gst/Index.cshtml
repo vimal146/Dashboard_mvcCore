@@ -1,0 +1,30 @@
+﻿@model List<Dashboard.Models.Domain.Gst>
+
+@{
+	Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div class="table">
+	<table id="myTable" class="table table-bordered table-hover table-sm">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var gst in Model)
+			{
+				<tr>
+					<td>@gst.Id</td>
+					<td>@gst.Name</td>
+					<td><a href="/Gst/View/@gst.Id">View</a></td>
+
+				</tr>
+			}
+		</tbody>
+
+
+	</table>
+</div>

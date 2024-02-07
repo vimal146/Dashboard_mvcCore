@@ -1,0 +1,202 @@
+﻿@{
+    Layout = "~/Views/Shared/_Invoice.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>Purchase Return</header>
+
+        <form action="Add">
+
+            <div class="form-first">
+                <div class="details">
+                    <span class=""></span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label for="">Supplier</label>
+                            <input type="text" placeholder="Supplier">
+
+                        </div>
+
+                        <div class="input-field">
+                            <label for="">Po:No</label>
+                            <input type="text" placeholder="Enter po no:">
+
+                        </div>
+
+                        <div class="input-field">
+                            <label for="">Invoice:No</label>
+                            <input type="text" placeholder="Enter invoice no:">
+
+                        </div>
+
+                        <div class="input-field">
+                            <label for="">Date</label>
+                            <input type="date" placeholder="Enter po no:">
+
+                        </div>
+
+                        <div class="input-field">
+                            <label for="">Invoice:No</label>
+                            <input type="text" placeholder="Enter invoice no:">
+
+                        </div>
+                        <div class="input-field">
+                            <label for="">Invoice:No</label>
+                            <input type="text" placeholder="Enter invoice no:">
+
+                        </div>
+                        <div class="input-field">
+                            <label for="">Invoice:No</label>
+                            <input type="text" placeholder="Enter invoice no:">
+
+                        </div>
+
+                        <div class="input-fields">
+                            <label for="">Address</label>
+                            <input type="text" placeholder="Address">
+
+                        </div>
+
+
+                    </div>
+                    @* <div class="figure">
+                    <div class="form">
+                    <label for="">Date</label>
+                    <input type="date" placeholder="Supplier">
+
+                    </div>
+                    <div class="form">
+                    <label for="">abc</label>
+                    <input type="text" placeholder="Supplier">
+
+                    </div>
+                    <div class="form">
+                    <label for="">bbc</label>
+                    <input type="text" placeholder="Supplier">
+
+                    </div>
+
+                    </div>*@
+
+                    <div class="table">
+
+
+                        <table id="" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th>Particular</th>
+                                    <th>Item.code</th>
+                                    <th>Barcode</th>
+                                    <th>Batch.No</th>
+                                    <th>MRP</th>
+                                    <th>Qty</th>
+                                    <th>P.Price</th>
+                                    <th>S.Price</th>
+                                    <th>Discount</th>
+                                    <th>GST</th>
+                                    <th>CGST</th>
+                                    <th>SGST</th>
+                                    <th>Tot.amount</th>
+                                    <th>
+                                        <button type="button" class="btn btn-sm btn-success" onclick="BtnAdd()">+</button>
+
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="TBody">
+                                <tr id="TRow" class="@*d-none*@">
+                                    <th scope="col">1</th>
+
+
+                                    <td><input style="position: relative; width: 400px; left: 0px; " name="" autocomplete="off"></td>
+                                    <td><input style="width:90px;" name="item.code" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="barcode" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:70px;" name="batch.No" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:70px;" name="MRP" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:40px;" name="qty" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="p.price" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="s.price" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="discount" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="GST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="CGST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:60px;" name="SGST" onchange="Calc(this);" autocomplete="off"></td>
+                                    <td><input style="width:80px;" name="amt" value="0" disabled="" autocomplete="off"></td>
+                                    <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="field">
+
+                        <div class="input-group">
+                            <label for="">Total</label>
+                            <input type="number" class="form-control text-end" id="FTotal" name="FTotal" disabled="">
+                        </div>
+                        <div class="input-group">
+                            <label for="">T.Charge</label>
+                            <input type="number" class="form-control text-end" id="FGST" name="FGST" onchange="GetTotal()">
+                        </div>
+                        <div class="input-group">
+                            <label for="">GST</label>
+                            <input type="number" class="form-control text-end" id="FGST" name="FGST" onchange="GetTotal()">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Grand Total</label>
+                            <input type="number" class="form-control text-end" id="FNet" name="FNet" disabled="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Currency</label>
+                            <input type="text" class="form-control text-end">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Payment method</label>
+                            <input type="text" class="form-control text-end">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Notes</label>
+                            <input type="text" class="form-control text-end">
+                        </div>
+
+
+                    </div>
+
+                    @*<div class="btn-group">
+                    <button type="submit" >Print</button>
+                    <button type="submit">Save</button>
+                    </div>*@
+
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="backBtn">
+                    <i class="fa fa-arrow-alt-circle-right"></i>
+                    <span class="btnText">Save</span>
+                </div>
+
+                <span class="submit">
+                    <span class="submit">Print</span>
+                    <i class="fa fa-arrow-alt-circle-right"></i>
+                </span>
+            </div>
+
+
+        </form>
+
+
+    </div>
+</body>
+</html>

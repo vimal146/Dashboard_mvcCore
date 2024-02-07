@@ -1,0 +1,176 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewData["Title"] = "Calculator";
+}
+
+<html>
+<head>
+    @*<title>Calculator Popup</title>*@
+    <style>
+        /* Styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #f2f2f2;
+            margin: 15% auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 250px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .calculator button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .operator {
+            background-color: #f39200;
+            color: white;
+        }
+
+        .equal {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .clear {
+            background-color: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator Popup Example</h1>
+    <!-- Button to open calculator popup -->
+    <button onclick="openCalculator()">Open Calculator</button>
+
+    <!-- Calculator Popup (Hidden by default) -->
+    <div id="calculatorModal" class="modal">
+        <div class="calculator">
+            <span class="close" onclick="closeCalculator()">&times;</span>
+            @*<input type="text" id="calculatorDisplay" readonly>*@
+            <!-- Calculator buttons -->
+            <input type="text" id="display" readonly>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')" class="operator">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()" class="equal">=</button>
+            <button onclick="appendToDisplay('/')" class="operator">/</button>
+            <button onclick="appendToDisplay('%')" class="operator">%</button>
+            <!-- Include other calculator buttons as needed -->
+            @*<button onclick="calculate()" class="equal">=</button>*@
+        </div>
+        @*<div class="calculator">
+            <span class="close" onclick="closeCalculator()">&times;</span>
+            <input type="text" id="display" readonly>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('')" class="operator"></button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()" class="equal">=</button>
+            <button onclick="appendToDisplay('/')" class="operator">/</button>
+        </div>*@
+
+
+    </div>
+
+    <!-- JavaScript to show/hide the calculator popup -->
+    <script>
+        function openCalculator() {
+            document.getElementById("calculatorModal").style.display = "block";
+        }
+
+        function closeCalculator() {
+            document.getElementById("calculatorModal").style.display = "none";
+        }
+
+                // JavaScript functions for calculator functionality (e.g., appendToDisplay, calculate)
+                // Add these functions here or include a separate script file.
+        function appendToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function calculate() {
+            try {
+                const result = eval(document.getElementById("display").value);
+                document.getElementById("display").value = result;
+            } catch (error) {
+                document.getElementById("display").value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

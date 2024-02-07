@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AddItem>
+@{
+    Layout = "~/Views/Shared/_Barcode.cshtml";
+}
+<h2>Search Results</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Sales Price</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ItemNameId</td>
+                <td>@item.CategoryId</td>
+                <td>@item.SalePriceId</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
